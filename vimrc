@@ -40,9 +40,11 @@ nmap <C-p> <Plug>EnhancedJumpsRemoteNewer
 Plug 'inkarkat/vim-ConflictDetection'
 
 " Snippets
-Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger='<Tab>'
+if v:version>=800
+    Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips'
+    let g:UltiSnipsExpandTrigger='<Tab>'
+endif
 
 call plug#end()
 
