@@ -71,14 +71,14 @@ inoremap <F2> <CMD>w<CR>
 
 " Clipboard mappings
 " Make x, d and dd delete with no register
-'noremap x  "_x
+noremap x  "_x
 vnoremap x  "_x
-'noremap d  "_d
+noremap d  "_d
 vnoremap d  "_d
 nnoremap dd "_dd
 
 " use m (move) for deleting with register
-'noremap m  d
+noremap m  d
 vnoremap m  d
 nnoremap mm dd
 nnoremap gm m
