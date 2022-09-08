@@ -27,7 +27,7 @@ if v:version>=800
 endif
 
 " Options
-mouse=a
+set mouse=a
 
 " Motion
 Plug 'rhysd/clever-f.vim'
