@@ -10,7 +10,7 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kopischke/vim-fetch'
 
-Plug 'packer_cfg.mundo'
+Plug 'simnalamburt/vim-mundo'
 nmap <Leader>uu <CMD>MundoToggle<CR>
 let g:mundo_preview_bottom=1
 let g:mundo_width=30
