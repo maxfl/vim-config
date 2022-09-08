@@ -13,7 +13,9 @@ endif
 
 " Buffers and windows
 set hidden
-Plug 'vim-ctrlspace/vim-ctrlspace'
+if v:version>=800
+    Plug 'vim-ctrlspace/vim-ctrlspace'
+endif
 
 call plug#end()
 
