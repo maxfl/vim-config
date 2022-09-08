@@ -26,6 +26,9 @@ if v:version>=800
     Plug 'vim-ctrlspace/vim-ctrlspace'
 endif
 
+" Options
+mouse=a
+
 " Motion
 Plug 'rhysd/clever-f.vim'
 nnoremap <Leader>fr <Plug>(clever-f-reset)
