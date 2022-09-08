@@ -17,4 +17,7 @@ Plug 'vim-ctrlspace/vim-ctrlspace'
 
 call plug#end()
 
+" Indents
 set tabstop=4 sts=4 shiftwidth=4 expandtab
+" Search
+set smartcase
