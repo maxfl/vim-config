@@ -11,6 +11,9 @@ if v:version>=800
     Plug 'mg979/vim-visual-multi'
 endif
 
+" Buffers and windows
+Plug 'vim-ctrlspace/vim-ctrlspace'
+
 call plug#end()
 
 set tabstop=4 sts=4 shiftwidth=4 expandtab
