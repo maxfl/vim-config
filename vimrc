@@ -17,6 +17,12 @@ if v:version>=800
     Plug 'vim-ctrlspace/vim-ctrlspace'
 endif
 
+Plug 'inkarkat/vim-ingo-library'
+Plug 'inkarkat/vim-EnhancedJumps',
+let g:EnhancedJumps_CaptureJumpMessages=0
+nmap <C-n> <Plug>EnhancedJumpsRemoteOlder
+nmap <C-p> <Plug>EnhancedJumpsRemoteNewer
+
 call plug#end()
 
 " Indents
