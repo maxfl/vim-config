@@ -25,7 +25,12 @@ nmap <C-p> <Plug>EnhancedJumpsRemoteNewer
 
 call plug#end()
 
+" Interface
+set relativenumber
+set number
+
 " Indents
 set tabstop=4 sts=4 shiftwidth=4 expandtab
+
 " Search
 set smartcase
