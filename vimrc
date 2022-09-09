@@ -51,6 +51,9 @@ call plug#begin('~/.local/share/vim/plugged')
 
     " Files and folders
     Plug 'francoiscabrol/ranger.vim'
+
+    " Filetypes
+    Plug 'georgewitteman/vim-fish'
 call plug#end()
 
 " Interface
