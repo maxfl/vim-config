@@ -56,6 +56,10 @@ call plug#begin('~/.local/share/vim/plugged')
     Plug 'georgewitteman/vim-fish'
 call plug#end()
 
+" Editing
+set undofile
+set undodir=~/.vimundo/
+
 " Interface
 set relativenumber
 set number
