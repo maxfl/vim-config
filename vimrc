@@ -49,6 +49,10 @@ call plug#begin('~/.local/share/vim/plugged')
         let g:UltiSnipsExpandTrigger='<Tab>'
     endif
 
+    let g:NERDCreateDefaultMappings = 1
+    let g:NERDSpaceDelims = 1
+    Plug 'preservim/nerdcommenter'
+
     " Files and folders
     Plug 'francoiscabrol/ranger.vim'
 
