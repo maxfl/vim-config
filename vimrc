@@ -16,6 +16,18 @@ call plug#begin('~/.local/share/vim/plugged')
     let g:mundo_width=30
     let g:mundo_right=1
 
+    Plug 't9md/vim-textmanip'
+    xmap <C-j> <Plug>(textmanip-move-down)
+    xmap <C-k> <Plug>(textmanip-move-up)
+    xmap <C-h> <Plug>(textmanip-move-left)
+    xmap <C-l> <Plug>(textmanip-move-right)
+    function! TMoff()
+        set ei+=TextYankPost
+    endfunction
+    function! TMon()
+        set ei-=TextYankPost
+    endfunction
+
     if v:version>=800
         Plug 'mg979/vim-visual-multi'
     endif
@@ -55,6 +67,13 @@ call plug#begin('~/.local/share/vim/plugged')
 
     " Files and folders
     Plug 'francoiscabrol/ranger.vim'
+
+    " Diff
+    Plug 'will133/vim-dirdiff'
+    map <unique> <Leader>Dg <Plug>DirDiffGet
+    map <unique> <Leader>Dp <Plug>DirDiffPut
+    map <unique> <Leader>Dj <Plug>DirDiffNext
+    map <unique> <Leader>Dk <Plug>DirDiffPrev
 
     " Filetypes
     Plug 'georgewitteman/vim-fish'
