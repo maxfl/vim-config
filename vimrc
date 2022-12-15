@@ -34,8 +34,16 @@ call plug#begin('~/.local/share/vim/plugged')
 
     " Buffers and windows
     set hidden
+    " let g:CtrlSpaceSetDefaultMapping=1
+    let g:CtrlSpaceUseTabline=1
+    " let g:CtrlSpaceDefaultMappingKey='<C-Space> '
+    let g:CtrlSpaceProjectRootMarkers = [ ".git", ".hg", ".svn", ".bzr", ".envrc", "_darcs", "CVS" ]
+    nmap <M-u>    :CtrlSpaceGoUp<CR>
+    nmap <M-S-u>  :CtrlSpaceGoDown<CR>
     if v:version>=800
         Plug 'vim-ctrlspace/vim-ctrlspace'
+    else
+        Plug 'vim-ctrlspace/vim-ctrlspace', {'branch': 'version_5'}
     endif
 
     " Options
@@ -45,6 +53,10 @@ call plug#begin('~/.local/share/vim/plugged')
     Plug 'rhysd/clever-f.vim'
     nnoremap <Leader>fr <Plug>(clever-f-reset)
     nnoremap ; <Plug>(clever-f-repeat-forward)
+
+    " Code{
+    Plug 'foosoft/vim-argwrap',
+    nnoremap <Leader>, <CMD>ArgWrap<CR>
 
     " Jumps and conflicts
     Plug 'inkarkat/vim-ingo-library'
