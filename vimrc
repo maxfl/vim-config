@@ -30,6 +30,15 @@ call plug#begin('~/.local/share/vim/plugged')
 
     if v:version>=800
         Plug 'mg979/vim-visual-multi'
+        let g:VM_theme = 'neon'
+        vmap I <Plug>(VM-Visual-Cursors)
+        vnoremap <Leader>I I
+
+        function! VM_Exit()
+          let bn=string(bufnr())
+          exe 'imap <buffer> <silent> <BS> <Cmd>lua require("pears").handle_backspace('.bn.')<CR>'
+          exe 'imap <buffer> <silent> <CR> <Cmd>lua require("pears").handle_return('.bn.')<CR>'
+        endfunction
     endif
 
     " Buffers and windows
