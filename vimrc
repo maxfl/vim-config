@@ -67,6 +67,16 @@ call plug#begin('~/.local/share/vim/plugged')
     Plug 'foosoft/vim-argwrap',
     nnoremap <Leader>, <CMD>ArgWrap<CR>
 
+    Plug 'derekwyatt/vim-fswitch'
+    let g:fsnonewfiles=1
+    au! BufEnter *.cpp,*.c,*.C,*.cxx,*.cc,*.CC let b:fswitchdst = 'hpp,h,H,hh,HH,hxx' | exe "let b:fswitchlocs = '../inc,../include".",../".expand("%:h:h:t")."'"
+    au! BufEnter *.hpp,*.h,*.H,*.hh,*.HH,*.hxx let b:fswitchdst = 'cpp,c,C,cc,CC,cxx' | let b:fswitchlocs = '../src'
+    nmap <silent> <Leader>aa <CMD>FSHere<CR>
+    nmap <silent> <Leader>ar <CMD>tab FSRight<CR>
+    nmap <silent> <Leader>al <CMD>tab FSLeft<CR>
+    nmap <silent> <Leader>aR <CMD>tab FSSplitRight<CR>
+    nmap <silent> <Leader>aL <CMD>tab FSSplitLeft<CR>
+
     " Jumps and conflicts
     Plug 'inkarkat/vim-ingo-library'
     Plug 'inkarkat/vim-EnhancedJumps',
