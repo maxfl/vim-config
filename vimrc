@@ -77,6 +77,8 @@ call plug#begin('~/.local/share/vim/plugged')
     nmap <silent> <Leader>aR <CMD>tab FSSplitRight<CR>
     nmap <silent> <Leader>aL <CMD>tab FSSplitLeft<CR>
 
+    Plug 'tpope/vim-fugitive'
+
     " Jumps and conflicts
     Plug 'inkarkat/vim-ingo-library'
     Plug 'inkarkat/vim-EnhancedJumps',
