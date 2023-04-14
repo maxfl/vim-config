@@ -75,7 +75,7 @@ call plug#begin('~/.local/share/vim/plugged')
     nmap <C-p> <Plug>EnhancedJumpsRemoteNewer
     Plug 'inkarkat/vim-ConflictDetection'
     Plug 'inkarkat/vim-CountJump' "required by ConflictMotions
-    Plug 'inkarkat/vim-visualrepeat'
+    Plug 'inkarkat/vim-ConflictMotions'
     let g:ConflictMotions_TakeMappingPrefix='<Leader>='
 
     " Snippets
