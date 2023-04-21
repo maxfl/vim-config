@@ -111,6 +111,8 @@ call plug#begin('~/.local/share/vim/plugged')
     map <unique> <Leader>Dj <Plug>DirDiffNext
     map <unique> <Leader>Dk <Plug>DirDiffPrev
 
+    Plug 'taze55/vim-dirdifftree'
+
     " Filetypes
     Plug 'georgewitteman/vim-fish'
 call plug#end()
