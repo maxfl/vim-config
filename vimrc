@@ -110,8 +110,10 @@ call plug#begin('~/.local/share/vim/plugged')
     map <unique> <Leader>Dp <Plug>DirDiffPut
     map <unique> <Leader>Dj <Plug>DirDiffNext
     map <unique> <Leader>Dk <Plug>DirDiffPrev
+    let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp,.git,__pycache__,*.pyc"
 
     Plug 'taze55/vim-dirdifftree'
+    let g:DirDiffExcludeDirs = ['.git', 'node_modules', '__pycache__', '*.pyc']
 
     " Filetypes
     Plug 'georgewitteman/vim-fish'
