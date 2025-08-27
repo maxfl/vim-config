@@ -114,6 +114,9 @@ call plug#begin('~/.local/share/vim/plugged')
 
     Plug 'taze55/vim-dirdifftree'
     let g:DirDiffExcludeDirs = ['.git', 'node_modules', '__pycache__', '*.pyc']
+    
+    Plug 'rickhowe/diffchar.vim'
+    let g:DiffUnit = "Char"
 
     " Filetypes
     Plug 'georgewitteman/vim-fish'
