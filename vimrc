@@ -4,6 +4,9 @@ call plug#begin('~/.local/share/vim/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'inkarkat/vim-visualrepeat'
 
+    " Clipboard
+    Plug 'jasonccox/vim-wayland-clipboard'
+
     " Editing
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
