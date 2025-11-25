@@ -166,3 +166,8 @@ nmap Do :.diffget<CR>
 xmap Dp :diffput<CR>
 xmap Do :diffget<CR>
 
+" filetype based config
+augroup myfileconfig
+    au!
+    au BufRead,BufEnter *.md set wrap
+augroup END
