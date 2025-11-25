@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/vim/plugged')
-
     " Plug 'wuelnerdotexe/human.vim'
     Plug 'tpope/vim-sensible'
     Plug 'tpope/vim-repeat'
@@ -116,7 +115,8 @@ call plug#begin('~/.local/share/vim/plugged')
     let g:DirDiffExcludeDirs = ['.git', 'node_modules', '__pycache__', '*.pyc']
     
     Plug 'rickhowe/diffchar.vim'
-    let g:DiffUnit = "Char"
+    let g:DiffUnit = "Word"
+    colorscheme lunaperche
 
     " Filetypes
     Plug 'georgewitteman/vim-fish'
@@ -156,3 +156,10 @@ noremap m  d
 vnoremap m  d
 nnoremap mm dd
 nnoremap gm m
+
+" diff
+nmap Dp :.diffput<CR>
+nmap Do :.diffget<CR>
+xmap Dp :diffput<CR>
+xmap Do :diffget<CR>
+
