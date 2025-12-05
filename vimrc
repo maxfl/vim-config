@@ -65,7 +65,7 @@ call plug#begin('~/.local/share/vim/plugged')
     nnoremap <Leader>fr <Plug>(clever-f-reset)
     nnoremap ; <Plug>(clever-f-repeat-forward)
 
-    " Code{
+    " Code
     Plug 'foosoft/vim-argwrap',
     nnoremap <Leader>, <CMD>ArgWrap<CR>
 
@@ -116,13 +116,22 @@ call plug#begin('~/.local/share/vim/plugged')
 
     Plug 'taze55/vim-dirdifftree'
     let g:DirDiffExcludeDirs = ['.git', 'node_modules', '__pycache__', '*.pyc']
-    
-    Plug 'rickhowe/diffchar.vim'
-    let g:DiffUnit = "Word"
+
+    " Plug 'rickhowe/diffchar.vim'
+    " let g:DiffUnit = "Word"
     colorscheme lunaperche
 
     " Filetypes
     Plug 'georgewitteman/vim-fish'
+
+    " text and spelling
+    " works with languagetool 5.9 (which has --api flag for xml output)
+    " which works with jre-9
+    " $ archlinux-java set ...
+    Plug 'ilya-bobyr/vim-grammarous'
+    let g:grammarous#languagetool_cmd = '/usr/bin/languagetool'
+    let g:grammarous#use_vim_spelllang = 0
+    let g:grammarous#default_lang = 'en-US'
 call plug#end()
 
 " Editing
@@ -132,6 +141,7 @@ set undodir=~/.vimundo/
 " Interface
 set relativenumber
 set number
+set listchars+=eol:\\u21aa,multispace:_
 
 " Indents
 set tabstop=4 sts=4 shiftwidth=4 expandtab
@@ -139,6 +149,9 @@ set tabstop=4 sts=4 shiftwidth=4 expandtab
 " Search
 set smartcase
 set ignorecase
+
+" Spell
+set spelllang=en,ru_yo
 
 "
 " Mappings
@@ -161,6 +174,8 @@ nnoremap mm dd
 nnoremap gm m
 
 " diff
+nmap D <nop>
+xmap D <nop>
 nmap Dp :.diffput<CR>
 nmap Do :.diffget<CR>
 xmap Dp :diffput<CR>
